@@ -12,9 +12,11 @@ public class C03_NavigateMethods {
         //amazon sayfasına gidelim
         driver.get("https://amazon.com");
         Thread.sleep(3000);//Java kodlarını bekletmek için kullanırız(3 saniye bekletir)
+
         //Sonra techproeducation sayfasına gidelim
         driver.navigate().to("https://techproeducation.com");//get() methodu ile aynı şekilde çalışır
         Thread.sleep(3000);
+
         //techpro sayfa başlığını konsola yazdıralım
         System.out.println("Sayfa Başlığı : "+driver.getTitle());
         //tekrar amazon sayfasına geri dönelim
@@ -24,9 +26,13 @@ public class C03_NavigateMethods {
         System.out.println("Sayfa Başlığı : "+driver.getTitle());
         //tekrar techpro sayfasına geri gidelim
         driver.navigate().forward();
+        Thread.sleep(4000);
         //son olarak sayfayı yenileyelim ve sayfayı kapatalım
-        driver.navigate().refresh();//sayfayı yeniler
+        driver.navigate().refresh();
+        Thread.sleep(4000);
+        driver.navigate().back();
+        Thread.sleep(5000);//sayfayı yeniler
         driver.close();//driver'i kapatır
-        //NOT: Sayfalar arası geçişler hızlı olacağından 3 saniye geçişler için bekletelim
+        //NOT: Sayfalar arası geçişler hızlı olacağından 3 saniye geçişler için bekletelim.
     }
 }
