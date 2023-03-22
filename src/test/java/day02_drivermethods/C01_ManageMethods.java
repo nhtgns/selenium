@@ -31,5 +31,8 @@ public class C01_ManageMethods {
         Thread.sleep(3000);
         driver.manage().window().setSize(new Dimension(600,600)); // istedigimiz boyuta getirir
         Thread.sleep(2000);
+
+
+
     }
 }

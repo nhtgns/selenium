@@ -15,7 +15,7 @@ public class C02_ManageMethods {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 
-        //Youtube web sayfasına gidin ve sayfa başlığının “youtube” olup olmadığını doğrulayın  (verify),
+        //1. Youtube web sayfasına gidin ve sayfa başlığının “youtube” olup olmadığını doğrulayın  (verify),
         //eğer değilse doğru başlığı(Actual Title) konsolda yazdirin.
         driver.get("https://youtube.com");
         String actueltitel = driver.getTitle();  // gercek baslik
@@ -28,7 +28,7 @@ public class C02_ManageMethods {
             System.out.println("TEST FAILED gercek baslik:" + actueltitel);
         }
 
-        //Sayfa URL'sinin “youtube” içerip içermediğini (contains) doğrulayın, içermiyorsa doğru  URL'yi yazdırın.
+        //2. Sayfa URL'sinin “youtube” içerip içermediğini (contains) doğrulayın, içermiyorsa doğru  URL'yi yazdırın.
         String actuelUrl = driver.getCurrentUrl();
        String beklenenkelime = "youtube";
 
@@ -38,20 +38,20 @@ public class C02_ManageMethods {
        }else {
             System.out.println("TEST FAILED gercek Url:" + actuelUrl);
         }
-        //Daha sonra Amazon sayfasina gidin https://www.amazon.com/
+        //3. Daha sonra Amazon sayfasina gidin https://www.amazon.com/
         driver.navigate().to("https://amazon.com");
 
-        //Youtube sayfasina geri donun
+        //4.Youtube sayfasina geri donun
         driver.navigate().back();
         Thread.sleep(2000);
 
-        //Sayfayi yenileyin
+        //5. Sayfayi yenileyin
         driver.navigate().refresh();
 
-        //Amazon sayfasina donun
+        //6. Amazon sayfasina donun
         driver.navigate().forward();
 
-        //Ardından sayfa başlığının "Amazon" içerip içermediğini (contains) doğrulayın, Yoksa  doğru başlığı(Actual Title) yazdırın.
+        //7.Ardından sayfa başlığının "Amazon" içerip içermediğini (contains) doğrulayın, Yoksa  doğru başlığı(Actual Title) yazdırın.
         String actualtitel = driver.getTitle();
         String istenenkelime = "Amazon";
 
@@ -61,7 +61,7 @@ public class C02_ManageMethods {
             System.out.println("TEST FAILED GERCEK BASLIK" + actualtitel);
         }
 
-        //Sayfa URL'sinin https://www.amazon.com/ olup olmadığını doğrulayın, degilse doğru
+        //8Sayfa URL'sinin https://www.amazon.com/ olup olmadığını doğrulayın, degilse doğru
         //URL'yi yazdırın
         String gercekUrl = driver.getCurrentUrl();
         String istenenUrl = "https://www.amazon.com/";
@@ -71,7 +71,8 @@ public class C02_ManageMethods {
         }else System.out.println("TEST FAILED Gerçek Url = "+gercekUrl);
 
       // Sayfayi kapatin
-        driver.close();
+
+
 
     }
 }
