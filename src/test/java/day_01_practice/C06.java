@@ -20,8 +20,8 @@ public class C06 {
         System.out.println("pencere olcusu:" + driver.manage().window().getSize());
 
         // pencere konumunu 20,20 yapiniz, pencere olcusunu 900,600 olarak degistirelim
-        driver.manage().window().setPosition(new Point(20,20));
-        driver.manage().window().setSize(new Dimension(900,600));
+        driver.manage().window().setPosition(new Point(20,30));
+        driver.manage().window().setSize(new Dimension(500,900));
 
         // yeni pencere konumunu ve yeni pencere olcusunu yazdiriniz
         System.out.println("yeni pencere konumu:" + driver.manage().window().getPosition());

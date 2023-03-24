@@ -19,7 +19,7 @@ public class C01 {
         Thread.sleep(2000);
 
         //3. "https://www.n11.com/" adresine gidiniz.
-        driver.get("https://www.n11.com/");
+        driver.navigate().to("https://www.n11.com/");
         Thread.sleep(2000);
 
         //4. amazon adresine geri donunuz
@@ -29,6 +29,12 @@ public class C01 {
         //5. n11 adresine ilerleyiniz
         driver.navigate().forward();
         Thread.sleep(2000);
+
+        driver.get("https://techproeducation.com");
+        Thread.sleep(2000);
+
+        driver.navigate().back();
+        driver.navigate().back();
 
         //6. sayfayi yenileyiniz
         driver.navigate().refresh();

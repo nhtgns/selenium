@@ -22,7 +22,7 @@ public class C07 {
         WebDriver driver = new EdgeDriver();
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         // https://www.amazon.com/ adresine gidin
         driver.get("https://www.amazon.com/");
@@ -30,11 +30,11 @@ public class C07 {
 
         // arama motorunda nutella yazip aratınız
         WebElement aramaMotoru = driver.findElement(By.id("twotabsearchtextbox"));
-        aramaMotoru.sendKeys("nutella" + Keys.ENTER);
+        aramaMotoru.sendKeys("nutella",Keys.ENTER);
         //veya aramaMotoru.submit
 
         // sayfada kac tane link oldugunu bulunuz. html de taglar <a> seklindedir
-        List<WebElement> linklerListesi = driver.findElements(By.tagName("a")); //list donuyor
+        List<WebElement> linklerListesi = driver.findElements(By.tagName("a")); //list dönuyor
         System.out.println(linklerListesi.size());
 
         // linkleri yazdiriniz

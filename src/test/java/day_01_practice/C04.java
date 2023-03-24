@@ -10,6 +10,7 @@ public class C04 {
         // Kaynak Kodlarini konsola yazdiriniz
         // Kaynak Kodlarinda "Gateway" yazdigini test edin
         // sayfayi kapatiniz
+
         System.setProperty("edgeDriver", "src/resources/driver/msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
         driver.manage().window().maximize();
