@@ -8,7 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class C01_ManageMethods {
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("edgeDriver","src/resources/driver/msedgedriver.exe");
+        System.setProperty("edgeDriver", "src/resources/driver/msedgedriver.exe");
         System.out.println(System.getProperty("edgeDriver"));
         WebDriver driver = new EdgeDriver();
 
@@ -31,6 +31,7 @@ public class C01_ManageMethods {
         Thread.sleep(3000);
         driver.manage().window().setSize(new Dimension(600,600)); // istedigimiz boyuta getirir
         Thread.sleep(2000);
+
 
 
 

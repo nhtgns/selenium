@@ -24,7 +24,6 @@ public class C02_getTagNameGetAttribute {
         // 1- amazon.com'a gidip arama kutusunu locate edin
         driver.get("https://amazon.com");
         WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
-
         // 2- arama kutusunun tagName'inin input oldugunu test edin
         String actualTagName = aramaKutusu.getTagName();
         System.out.println("actualTagName" + actualTagName);
@@ -37,7 +36,6 @@ public class C02_getTagNameGetAttribute {
         // 3- arama kutusunun name attribute'nun degerinin field-keywords oldugunu test edin
         String actualAttribute = aramaKutusu.getAttribute("name");
         System.out.println("actualAttribute :" + actualAttribute);
-
         String expectedAttribute = "field-keywords";
 
         if (actualAttribute.equals(expectedAttribute)){
@@ -46,7 +44,10 @@ public class C02_getTagNameGetAttribute {
 
 
 
-            }
-        }
+
+
+
+    }
+}
 
 

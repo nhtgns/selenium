@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import java.time.Duration;
+import java.util.List;
 
 public class C03_WebelementLocators {
     public static void main(String[] args) throws InterruptedException {
@@ -15,43 +16,26 @@ public class C03_WebelementLocators {
         System.out.println(System.getProperty("edgeDriver"));
         WebDriver driver = new EdgeDriver();
 
-//        driver.manage().window().maximize();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-//
-//        //Amazon sayfasına gidiniz
-//        driver.get("https://amazon.com");
-//        //Search box bölümünü locate ediniz ve amazonda iphone aratınız
-//       // driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone", Keys.ENTER); //by, ile demek. by.id ,bu id ile
-//        //submit yapmak yerine sendKeys("iphone", Keys.ENTER); olarak kullanabiliriz.
-//
-//        //WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
-//        //searchBox.submit();//Enter yapmak için submit() kullanılabilir
-//        //NOT : Eğer bir webelementi birden fazla kullanılacaksa bir webelement e atama yapılabilir
-//        //searchBox.sendKeys("iphone");//Locate ettiğimiz searchBox'a iphone metnini gönderir
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
-      driver.manage().window().maximize();
-      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(9));
+        //Amazon sayfasına gidiniz
+       // driver.get("https://amazon.com");
+        //Search box bölümünü locate ediniz ve amazonda iphone aratınız
+      //  driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone", Keys.ENTER);
+        //submit yapmak yerine sendKeys("iphone", Keys.ENTER); olarak kullanabiliriz.
 
-////      driver.get("https://amazon.com");
-////      driver.findElement(By.id("twotabsearchtextbox")).sendKeys("tablet",Keys.ENTER);
-//
-//        WebElement  searchbox = driver.findElement(By.id("twotabsearchtextbox"));
-//        searchbox.submit();
-
-        driver.get("https://www.modanisa.com/");
-       driver.findElement(By.id("search-input")).sendKeys("pantolon",Keys.ENTER);
+        //WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
+        //searchBox.submit();//Enter yapmak için submit() kullanılabilir
+        //NOT : Eğer bir webelementi birden fazla kullanılacaksa bir webelement e atama yapılabilir
+        //searchBox.sendKeys("iphone");//Locate ettiğimiz searchBox'a iphone metnini gönderir
 
 
 
-//        Thread.sleep(2000);
-//        driver.get("https://www.amazon.com/");
-//        Thread.sleep(3000);
-//        driver.navigate().back();
-//        Thread.sleep(3000);
-//        driver.navigate().forward();
-//        Thread.sleep(3000);
-//        driver.navigate().refresh();
-//        driver.close();
+        driver.get("https://amazon.com");
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone",Keys.ENTER);
+        List <WebElement> list = driver.findElements(By.className("s-image"));
+        list.get(2).click();
 
 
     }

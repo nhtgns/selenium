@@ -15,26 +15,28 @@ public class C03_WebelementLocators {
         WebDriver driver = new EdgeDriver();
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//
+////        //web sayfasına gidin. https://www.amazon.com/
+////        driver.get("https://amazon.com");
+////
+////        //Search(ara) “city bike”
+////        WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
+////        aramaKutusu.sendKeys("city bike", Keys.ENTER);
+////
+////        //Amazon'da görüntülenen ilgili sonuçların sayısını yazdırın
+////        List<WebElement> sonucYazisi = driver.findElements(By.className("sg-col-inner"));
+////        System.out.println("Sonuc Yazısı : "+sonucYazisi.get(0).getText());
+////
+////        //Sadece sonuc sayısını yazdıralım
+////        String [] sonucSayisi = sonucYazisi.get(0).getText().split(" ");//Sonuc yazısını boşluklardan boldum
+////        System.out.println("SonucSayisi = "+sonucSayisi[2]);
+////
+////        //Sonra karşınıza çıkan ilk sonucun resmine tıklayın.
+////        List<WebElement> sonuclar = driver.findElements(By.className("s-image"));
+////        sonuclar.get(0).click();
 
-        //web sayfasına gidin. https://www.amazon.com/
-        driver.get("https://amazon.com");
 
-        //Search(ara) “city bike”
-        WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
-        aramaKutusu.sendKeys("city bike", Keys.ENTER);
-
-        //Amazon'da görüntülenen ilgili sonuçların sayısını yazdırın
-        List<WebElement> sonucYazisi = driver.findElements(By.className("sg-col-inner"));
-        System.out.println("Sonuc Yazısı : "+sonucYazisi.get(0).getText());
-
-        //Sadece sonuc sayısını yazdıralım
-        String [] sonucSayisi = sonucYazisi.get(0).getText().split(" ");//Sonuc yazısını boşluklardan boldum
-        System.out.println("SonucSayisi = "+sonucSayisi[2]);
-
-        //Sonra karşınıza çıkan ilk sonucun resmine tıklayın.
-        List<WebElement> sonuclar = driver.findElements(By.className("s-image"));
-        sonuclar.get(0).click();
 
 
 

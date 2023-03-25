@@ -1,5 +1,7 @@
 package day01Driver_Method;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
@@ -11,10 +13,9 @@ public class C01_Driver {
         //Key, value olarak önce isim sonra driver'imizin yolunu belirtiriz
 
         System.out.println(System.getProperty("edgeDriver"));
-
         //getProperty methodu ile "Key değerini girerek "value"'ya ulaşabilirim
-
         WebDriver driver = new EdgeDriver();   //Bos bir driver acar
+
       //  driver.get("https://techproeducation.com");//get() methodu ile adresini belittiğimiz sayfaya gideriz
         driver.get("https://www.hepsiburada.com/");
 
@@ -22,9 +23,6 @@ public class C01_Driver {
 
        System.out.println("sayfa url i :" + driver.getCurrentUrl());//icinde bulundugumuz sayfanin url ini verir
     //   System.out.println(driver.getPageSource()); //icinde bulundugumuz sayfanin html kodlarini verir
-
-
-
 
     }
 }

@@ -27,5 +27,9 @@ public class C01_findElements {
             System.out.println(w.getText());
 
         }
+
+
+
+
     }
 }
